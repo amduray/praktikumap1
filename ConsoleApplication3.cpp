@@ -11,7 +11,7 @@ int main()
 
     string nama;
     char golongan;
-    int jam_kerja, upah_per_jam, total_upah;
+    int jam_kerja, upah_per_jam, total_upah , Gaji_tetap;
 
     // proses input
     cout << "Nama Karyawan: ";
@@ -27,18 +27,23 @@ int main()
     switch (golongan) {
     case 'A':
         upah_per_jam = 10000;
+        Gaji_tetap = 1000000;
         break;
     case 'B':
         upah_per_jam = 20000;
+        Gaji_tetap = 2000000;
         break;
     case 'C':
         upah_per_jam = 30000;
+        Gaji_tetap = 3000000;
         break;
     case 'D':
         upah_per_jam = 40000;
+        Gaji_tetap = 4000000;
         break;
     case 'E':
         upah_per_jam = 50000;
+        Gaji_tetap = 5000000;
         break;
     }
     total_upah = jam_kerja * upah_per_jam;
@@ -49,13 +54,13 @@ int main()
             cout << "gaji pokok:A";
         }
         else(jam_kerja > 150);
-        cout << "lembur:" << (jam_kerja - 150) * golongan << endl;
-        cout << "gaji total" << nama << golongan + ((jam_kerja - 150) * golongan);
     }
 
     // proses output
     cout << endl;
     cout << nama << "menerima upah RP" << total_upah << "perbulan";
+    cout << "lembur:" << (jam_kerja - 150) * upah_per_jam << endl;
+    cout << "gaji total" << nama << Gaji_tetap + ((jam_kerja - 150) * upah_per_jam);
     cout << endl;
    
     return 0;
